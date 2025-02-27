@@ -1,18 +1,25 @@
-//package takesScreenshot;
+package takesScreenshot;
+import java.io.IOException;
+import java.time.Duration;
+
 //
 //import java.io.File;
 //import java.io.IOException;
 //import java.time.Duration;
 //
-//import org.apache.commons.io.FileUtils;
-//import org.openqa.selenium.OutputType;
-//import org.openqa.selenium.TakesScreenshot;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v129.filesystem.model.File;
+
 public class Screenshot {
 
 	//changes done in github
+	
+	
+	//change done in eclips
 	public static void main(String[] args) throws IOException {
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
@@ -74,28 +81,28 @@ public class Screenshot {
 //		
 //	}
 //}
-package takesScreenshot;
-
-import java.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class Screenshot{
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://www.ajio.com/");
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(100,1700)");
-		Thread.sleep(3000);
-		WebElement ele=driver.findElement(By.xpath("//strong[tet()='100% HANDPICKED']"));
-		js.executeScript("arguments[0].scrollIntoview(true)",ele);
-		Thread.sleep(3000);
-		driver.quit();
-	}
-}
+//package takesScreenshot;
+//
+//import java.time.Duration;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//
+//public class Screenshot{
+//	public static void main(String[] args) throws InterruptedException {
+//		WebDriver driver=new ChromeDriver();
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//		driver.get("https://www.ajio.com/");
+//		JavascriptExecutor js=(JavascriptExecutor)driver;
+//		js.executeScript("window.scrollBy(100,1700)");
+//		Thread.sleep(3000);
+//		WebElement ele=driver.findElement(By.xpath("//strong[tet()='100% HANDPICKED']"));
+//		js.executeScript("arguments[0].scrollIntoview(true)",ele);
+//		Thread.sleep(3000);
+//		driver.quit();
+//	}
+//}
 
