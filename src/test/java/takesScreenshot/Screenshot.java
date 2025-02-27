@@ -12,6 +12,7 @@
 //
 public class Screenshot {
 
+	//changes done in github
 	public static void main(String[] args) throws IOException {
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
